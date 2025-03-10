@@ -1,0 +1,26 @@
+.site-box {
+    text-align: left;
+    background-image: url(https://kzzq.nekoweb.org/img/box.png);
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 12px;
+}
+.site-box:hover, .site-box > a:hover {
+	cursor: url('https://kzzq.nekoweb.org/cursor.png'), auto;
+}
+.site-box .sitefeature {
+	border: 1px solid white;
+}
+.site-box > a > p {
+    margin-left: 15px !important;
+    top: 3px;
+}
+.site-box > a > p {
+    color: white;
+    font-weight: bold;
+}
+.site-box > a > span {
+    color: white;
+    margin-left: 16px !important;
+    bottom: 3px;
+}

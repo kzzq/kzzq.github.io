@@ -1,0 +1,383 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+.contno {
+	padding: 6px;
+	background: #444444;
+	border: 1px solid white;
+}
+body {
+    overflow: hidden;
+    pointer-events: none;
+}
+html {
+    height: 100vh;
+    cursor: url('/cursor.png'), auto;
+}
+@font-face {
+    font-family: Visitor;
+    src: url('/fonts/visitor_by_Segor.ttf');
+}
+@font-face {
+    font-family: Digitag;
+    src: url('/fonts/Digitag.ttf');
+}
+.mareqe {
+    border: 1px solid white;
+    background: rgb(15,15,15);
+}
+.mareqe img {
+    animation: marqe-scrol 5s linear infinite;
+}
+@keyframes marqe-scrol {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+.version {
+    font-family: Visitor;
+    font-size: 16px;
+    z-index: 5890438590348905;
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; 
+    cursor: url('/cursor.png'), auto;
+ }
+ .littlesecret, .littlesecret:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,0.015);
+ }
+.linkcontact {
+    float: right;
+}
+.imageview {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 50;
+    background: rgba(0,0,0,0.5);
+}
+.imageview .tab {
+    border: 0;
+    margin-top: -589px;
+    width: 125px;
+    height: 34px;
+    position: relative;
+}
+.imageview .imaging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.imageview .imaging img.view {
+    pointer-events: none;
+    height: 80%;
+    border: 1px solid white;
+}
+.imageview .buttons {
+    z-index: 1000;
+    bottom: 5%;
+    position: absolute;
+}
+button.close .imageview .view:hover, .imageview button.close:hover {
+    background: black;
+    color: white;
+}
+.imageview button.close {
+    transition: 0.5s;
+    color: rgba(255,255,255,0.65);
+    font-family: monospace;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid white;
+    padding: 2px;
+}
+.loading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+    background: black;
+}
+.game {
+    border: 1px solid white;
+    padding: 2px;
+}
+.game .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.marquee {
+    overflow: hidden;
+}
+.icon {
+    width: 16px;
+    margin-right: 4px;
+}
+.blinktext {
+    animation: blinktext 1.5s linear infinite;
+}
+@keyframes blinktext {
+    0%,49.999% {
+        opacity: 1;
+    }
+    50%,99.999% {
+        opacity: 0;
+    }
+}
+.left, .right {
+    height: auto;
+    display: flex;
+    font-family: 'MS UI Gothic';
+    text-rendering: optimizeLegibility;
+}
+.left span, .right span {
+    width: 20px;
+    position: relative;
+    animation: 15s marquee-left linear infinite;
+}
+.left span {
+    animation-delay: 0.6s;
+}
+.left span.b {
+    animation-delay: 1.2s;
+}
+.right span {
+    animation-delay: -0.6s;
+}
+.right span.b {
+    animation-delay: -1.2s;
+}
+@keyframes marquee-left {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -75%;
+    }
+}
+.imeg h6 {
+    position: absolute;
+    width: 78px;
+    margin: 233px 215px;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
+.imeg h5 {
+    position: absolute;
+    margin: 5px;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
+.imeg:hover > img {
+    box-shadow: 0 0 4px white;
+}
+.imeg img {
+    width: 300px;
+    border: 1px solid white;
+    box-shadow: 0 0 4px black;
+}
+.imeg {
+    margin: 15px;
+    width: 300px;
+    float: right;
+}
+noscript {
+    width: 100%;
+    top: 0;
+    text-align: center;
+    position: fixed;
+    background: rgb(73, 0, 0);
+    color: white;
+    padding: 5px;
+}
+@keyframes loadscr-disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.loadtext {
+    padding: 12px;
+    background: rgba(35,35,35,0.25);
+}
+.loadtext:after {
+    animation: loadentext 5s linear infinite;
+    content: "";
+}
+@keyframes loadentext {
+    0%,100% {content: "";}
+    25% {content: ".";}
+    50% {content: "..";}
+    75% {content: "...";}
+}
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    text-align: center;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    animation: turn 5s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cube {
+      animation: none;
+      transform: rotate3d(1, 1, 0, 45deg);
+    }
+  }  
+  @keyframes turn {
+    from { transform: rotate3d(0, 0, 0, 0); }
+    to { transform: rotate3d(1, 1, 1, 360deg); }
+  }
+  .cube__face {
+    border: 1px solid white;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+  .cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
+  .cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
+  .cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
+  .cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
+  .cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+  .cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+.container {
+    border: 1px solid white;
+    width: 800px;
+    height: auto;
+    background: rgb(25,25,25);
+}
+.logocont {
+    padding: 1px;
+    background: rgb(75, 75, 75);
+    border-bottom: 1px solid grey;
+}
+.updet {
+    padding: 15px;
+    display: inline-block;
+    height: 175px;
+    overflow-y: scroll;
+}
+.links button {
+    cursor: url('/cursor.png'), auto;
+    color: white;
+    background: transparent;
+    border: 0;
+    padding: 0 6px;
+    margin-bottom: 6px;
+    margin-left: 16px;
+    font-size: 24px;
+    font-family: Visitor;
+}
+.links button:hover {
+    background: white;
+    color: black;
+}
+.links button:active {
+    background: black;
+    color: white;
+}
+.dicusin {
+    width: 456px;
+    font-size: 12px;
+    margin: 10px;
+}
+@media screen and (max-width: 780px) {
+    .links, .dicusin { text-align: center; }
+    .imeg, .infoimage { display: none; }
+    .dicusin, .updet { width: 100%; }
+    .linkcontact { margin-right: 200px; }
+}
+.logocom h6 {
+    z-index: 100;
+    text-align: end;
+    margin: 12px;
+    font-size: 16px;
+}
+.logocom h1, .logocom h6, .logocom .image {
+    z-index: 12;
+    position: absolute;
+}
+.logocom h1 { font-family: Digitag; }
+.logocom {
+    perspective: 1000px;
+    overflow: hidden;
+    display: flex;
+    font-family: Visitor;
+    font-size: 72px;
+    background: black;
+    border: 2px solid white;
+    margin: 10px;
+    width: auto;
+    height: 300px;
+}
+.logocom img.image {
+    width: 200px;
+    filter:grayscale();
+}
+.logocom .image {
+    float: right;
+    text-align: right;
+    margin-top: 60px;
+    margin-left: 550px;
+}
+.logocom .shadow {
+    z-index: 11;
+    margin: 0;
+    width: 775px;
+    height: 300px;
+    position: absolute;
+        background-image:
+          linear-gradient(0deg,transparent,black 50%,rgb(35,35,35));
+}
+.logocom .bg {
+    width: 1500px;
+    margin-top: -200px;
+    margin-left: 50px;
+    height: 800px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(80deg) translateZ(30px);
+    animation: bg-move 1s linear infinite;
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(to right, #797979 4px, transparent 4px),
+          linear-gradient(to bottom, #797979 4px, transparent 4px);
+}
+@keyframes bg-move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 40px;
+    }
+}

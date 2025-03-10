@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>k e z z a q u r y m</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body onload="startin(); startload(); updatesystem()">
+    <p class="version">kzzq <span id="textver"></span> <span style="color: yellow;">[DEV]</span> | hosted with nekoweb</p>
+    <div class="imageview" id="image_view">
+        <div class="imaging">
+            <div class="buttons">
+                <button class="close" onclick="deview_concurimage()">close</button>
+            </div>
+            <img class="view" src="/img/screenshots/gm_freespace06_v2-10001.jpg">
+        </div>
+    </div>
+    <div class="marquee left">
+        <span class="a">私たちはあなたの人生を知っていました</span>
+        <span class="b">すべてが灰色です</span>
+    </div>
+    <div class="container">
+
+        <div class="logocont">
+
+            <div class="logocom">
+                <div class="bg"></div>
+                <div class="shadow"></div>
+                <h6>15.724</h6>
+                <h1>KZZQ</h1>
+                <img src="/img/logo_epilepsy.gif" class="image">
+            </div>
+            <hr>
+            <div class="links">
+                <nav>
+                    <button onclick="launch_info()">info</button><button onclick="launch_gallery()">gallery</button><button onclick="launch_updates()">updates</button><br class="secondls"><button onclick="launch_contact()">contact</button><button class="right" onclick="launch_credits()">credits</button>
+                </nav>
+            </div>
+
+            <div class="imeg" onclick="view_concurimage()">
+                <h5>Concurrent image:</h5>
+                <h6>[click to view]</h6>
+                <img src="/img/screenshots/gm_freespace06_v2-10001.jpg">
+                </div>
+        </div>
+        <div class="dicusin" id="section_info">
+            <h2>info</h2>
+            hello! this is official kezzaqurym website! as you can see, the website is redesigned a little bit.<br><br>
+            <span class="infoimage">over there is an concurrent image, which is captured from any Source engine games today, like <a href="https://gm12r.flatgrass.net/">Garry's Mod 12 Resurrected</a>. ➔</span><br>
+            as with links, you can go to sections in only one page.<br>
+            <a class="littlesecret" href="https://kzzq.pages.dev/">would you look at new design?</a>
+        </div>
+        <div class="dicusin" id="section_gallery">
+            <h2>gallery</h2>
+            <img src="/img/screenshots/gm_freespace06_v2-10001.jpg" class="imeg smol" onclick="view_concurimage()">
+            <p class="nopastimages">No past images taken.</p>
+        </div>
+        <div class="dicusin" id="section_updates">
+            <h2>UPDATE LOGS</h2>
+            <div class="comp updet">
+                <table>
+                    <ul>
+                        <b>Fren. Update. [Unknown; v2.1916A]</b>
+                        <li>Light theme</li>
+                    </ul>
+                    <hr>
+                	<ul><b>smol upditto fix [Decembeer 12th 2024; v2.1905A]</b>
+                        <li>Fixed the link for "GMOD12Resurrected", I think you know what I mean</li>
+                        <li>Fixed 'Not found' page</li>
+                        </ul>
+                        <hr>
+                    <ul><b>smol upditto fix [December 11th 2024; v2.1902A]</b>
+                        <li>Added update system
+                            <ul>
+                                <li>You cannot return back to previous update.</li>
+                            </ul>
+                        </li>
+                        <li>Added Credits section
+                            <ul>
+                                <li>Not finished yet</li>
+                            </ul>
+                        </li>
+                        <li><span class="glowtext">Glowing text for links, it is easy to make it glow!</span></li>
+                        <li>Fixed where some images (especially concurrent) don't show in Gallery section for mobile devices</li>
+                        <li>Website's now mobile-friendly
+                            <ul>
+                                <li>probably... or not...</li>
+                                <li>it was just besides for low-width devices</li>
+                            </ul>
+                        </li>
+                        <li>Fixed the cursor for hovering buttons</li>
+                    </ul>
+                    <hr>
+                    <ul><b>Pea. Update. [December 10th 2024; v2.1825A]</b>
+                        <li>Mostly redesigned an website layout, including:
+                            <ul>
+                                <li>Concurrent image</li>
+                                <li>Gallery section</li>
+                                <li>Contact section</li>
+                                <li>Extended logo container with some perspective things</li>
+                                <li>Cryptic (= japanese) text around that container</li>
+                                <li>Not so colourful anymore!</li>
+                            </ul>
+                        <li>Lacks some features (which I wouldn't bring back), including:
+                            <ul>
+                                <li>Guestbook</li>
+                                <li>Marquee</li>
+                                <li>Projects section</li>
+                                <li>Video holder</li>
+                                <li>Blogs</li>
+                            </ul>
+                        </li>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul><b>Colorful update [July 13th 2024; v1.3945]</b>
+                        <li>Layout changes:
+                            <ul>
+                                <li>Recolored the layout from depression to lightly blue
+                                <li>Improved guestbook</li> 
+                                <li>Added 'Credits' page</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul><b>Not-so-first update! [June 8th 2024; v1.2000]</b>
+                        <li>New layout:
+                            <ul>
+                                <li>Blogs!</li>
+                                <li>Projects!</li>
+                                <li>Video holder!</li>
+                                <li>Guestbook!</li>
+                                <li>Rabbit</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </table>
+            </div>
+        </div>
+        
+        <div class="dicusin" id="section_contact">
+            <h2><i>contact me!</i></h2>
+            <img class="icon" src="/img/icons/msn.png">MSN/WLM <span class="blinktext">::</span> rando@escargot.chat <span class="linkcontact"><a href="msnim:add?contact=rando@escargot.chat">Add me</a> | <a href="msnim:chat?contact=rando@escargot.chat">Chat with me</a></span><br>
+            <img class="icon" src="/img/icons/aim.svg">AOL:IM <span class="blinktext">::</span> rando <span class="linkcontact"><a href="aim:goim?screenname=rando">Instant Message</a></span><br>
+            <img class="icon" src="/img/icons/xfire.png">XF1re <span class="blinktext">::</span> kariol <span class="linkcontact"><a href="https://xf1re.com/profile/kariol" target="_blank">Profile</a> | <a href="https://xf1re.com/communities/kzzq" target="_blank">Group</a></span>
+        </div>
+        <div class="dicusin" id="section_credits">
+            <h2>credits</h2>
+            <div class="comp credi">
+                used for<br>
+                fonts <span class="blinktext">::</span> Logo - Digitag; Links - Visitor (russian language by Segor);
+            </div>
+        </div>
+    </div>
+    <div class="marquee right">
+        <span class="a">あなたはそれを知っています、私はそれを知っているべきです</span>
+        <span class="b">何がそれを引き起こしたでしょうか</span>
+    </div>
+
+    <div class="loading" id="loadscr">
+        <noscript>JavaScript is disabled from your browser! Please re-enable it, else this website will break for some important functions!</noscript>
+        <div class="scene">
+            <div class="cube">
+              <div class="cube__face cube__face--front"></div>
+              <div class="cube__face cube__face--back"></div>
+              <div class="cube__face cube__face--right"></div>
+              <div class="cube__face cube__face--left"></div>
+              <div class="cube__face cube__face--top"></div>
+              <div class="cube__face cube__face--bottom"></div>
+            </div>
+            <span class="loadtext">loading</span>
+          </div>
+          </div>
+          <div class="notif update" id="notif_update">
+            a new update is available. please fully refresh by clicking this notification.
+        </div>
+</body>
+<script src="/js/index.js" defer></script>
+</html>
