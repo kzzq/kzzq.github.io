@@ -3,30 +3,9 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
-    background: var(--background-color);
-    color: var(--text-color);
+    background: black;
+    color: white;
     font-family: sans-serif;
-}
-:root {
-    --background-color: black;
-    --shadowup-color: rgb(35,35,35);
-    --text-color: white;
-    --text2-color: black;
-    --main-color: white;
-    --cont-color: rgb(25,25,25);
-    --logocont-color: rgb(75, 75, 75);
-}
-body.light {
-    --background-color: #eee;
-    --shadowup-color: rgb(206, 206, 206);
-    --text-color: black;
-    --text2-color: white;
-    --main-color: black;
-    --cont-color: rgb(206, 206, 206);
-    --logocont-color: rgb(235, 235, 235);
-}
-body.light .logocom .image {
-    filter: grayscale() invert();
 }
 body {
     overflow: hidden;
@@ -55,7 +34,7 @@ html {
     src: url('/fonts/Digitag.ttf');
 }
 .imeg.smol {
-    border: 1px solid var(--main-color);
+    border: 1px solid white;
     width: auto;
     height: 100px;
     float: none;
@@ -65,7 +44,7 @@ html {
     border-color: grey;
 }
 .mareqe {
-    border: 1px solid var(--text-color);
+    border: 1px solid white;
     background: rgb(15,15,15);
 }
 .mareqe img {
@@ -89,7 +68,7 @@ html {
     bottom: 0;
 }
 a {
-    color: var(--text-color);
+    color: white;
     transition: 0.5s;
     text-decoration: none;
 }
@@ -98,10 +77,10 @@ a, .glowtext {
 }
 @keyframes glowingtext {
     0%,100% {
-        text-shadow: 0 0 2px var(--text-color);
+        text-shadow: 0 0 2px white;
     }
     50% {
-        text-shadow: 0 0 8px var(--text-color);
+        text-shadow: 0 0 8px white;
     }
 }
 a:hover { text-decoration: underline; 
@@ -153,8 +132,8 @@ a:hover { text-decoration: underline;
     position: absolute;
 }
 button.close .imageview .view:hover, .imageview button.close:hover {
-    background: var(--background-color);
-    color: var(--text-color);
+    background: black;
+    color: white;
 }
 .imageview button.close {
     transition: 0.5s;
@@ -173,10 +152,10 @@ button.close .imageview .view:hover, .imageview button.close:hover {
     position: absolute;
     z-index: 100;
     pointer-events: none;
-    background: var(--background-color);
+    background: black;
 }
 .game {
-    border: 1px solid var(--main-color);
+    border: 1px solid white;
     padding: 2px;
 }
 .game .title {
@@ -200,7 +179,6 @@ button.close .imageview .view:hover, .imageview button.close:hover {
 }
 .marquee {
     overflow: hidden;
-    color: var(--text-color);
 }
 .marquee.left, .marquee.right {
     height: auto;
@@ -237,12 +215,12 @@ button.close .imageview .view:hover, .imageview button.close:hover {
     position: absolute;
     width: 78px;
     margin: 233px 215px;
-    text-shadow: 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color);
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
 }
 .imeg h5 {
     position: absolute;
     margin: 5px;
-    text-shadow: 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color);
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black;
 }
 .imeg:hover > img {
     box-shadow: 0 0 4px white;
@@ -250,7 +228,7 @@ button.close .imageview .view:hover, .imageview button.close:hover {
 .imeg img {
     width: 300px;
     border: 1px solid white;
-    box-shadow: 0 0 4px var(--background-color);
+    box-shadow: 0 0 4px black;
 }
 .imeg {
     margin: 15px;
@@ -329,12 +307,12 @@ noscript {
     border: 1px solid white;
     width: 800px;
     height: auto;
-    background: var(--cont-color);
+    background: rgb(25,25,25);
     margin-bottom: 20px;
 }
 .logocont {
     padding: 1px;
-    background: var(--logocont-color);
+    background: rgb(75, 75, 75);
     border-bottom: 1px solid grey;
 }
 .comp.credi {
@@ -348,7 +326,7 @@ noscript {
 }
 button { cursor: url('/cursor.png'), auto; }
 .links button {
-    color: var(--text-color);
+    color: white;
     background: transparent;
     border: 0;
     padding: 0 6px;
@@ -358,11 +336,11 @@ button { cursor: url('/cursor.png'), auto; }
     font-family: Visitor;
 }
 .links button:hover {
-    background: var(--text-color);
-    color: var(--text2-color);
+    background: white;
+    color: black;
 }
 .links button:active {
-    background: var(--text2-color);
+    background: black;
     color: white;
 }
 .dicusin {
@@ -395,14 +373,14 @@ button { cursor: url('/cursor.png'), auto; }
     z-index: 12;
     position: absolute;
 }
-.logocom h1 { font-family: Digitag; color: var(--text-color); }
+.logocom h1 { font-family: Digitag; }
 .logocom {
     perspective: 1000px;
     overflow: hidden;
     display: flex;
     font-family: Visitor;
     font-size: 72px;
-    background: var(--text2-color);
+    background: black;
     border: 2px solid white;
     margin: 10px;
     width: auto;
@@ -425,7 +403,7 @@ button { cursor: url('/cursor.png'), auto; }
     height: 300px;
     position: absolute;
         background-image:
-          linear-gradient(0deg,transparent,var(--background-color) 50%,var(--shadowup-color));
+          linear-gradient(0deg,transparent,black 50%,rgb(35,35,35));
 }
 .logocom .bg {
     width: 1500px;

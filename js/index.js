@@ -63,7 +63,7 @@ function deview_concurimage() {
 
 function updatesystem() {
     const version = localStorage.getItem("version");
-    const versions = ["v2.1825A", "v2.1902A", "v2.1905A", "v2.1916A"];
+    const versions = ["v2.1825A", "v2.1902A", "v2.1905A"];
     const textver = document.getElementById("textver");
     const notification = document.getElementById("notif_update");
 
@@ -80,15 +80,4 @@ function updatesystem() {
         location.reload();
         localStorage.setItem("version", versions[versions.length - 1]);
     });
-}
-function themeSystem() {
-    const theme = localStorage.getItem("theme");
-
-    if (theme == "light") {
-        document.body.classList.add("light");
-    }
-
-    if (theme == "dark") {
-        document.body.classList.remove("light");
-    }
 }
