@@ -1,0 +1,28 @@
+:root {
+    --realbg-color: #eee;
+    --background-color: #eee;
+    --shadowup-color: rgb(206, 206, 206);
+    --text-color: black;
+    --text2-color: white;
+    --main-color: black;
+    --cont-color: rgb(206, 206, 206);
+    --logocont-color: rgb(235, 235, 235);
+}
+.logocom .image {
+    filter: grayscale() invert() !important;
+}
+.logocom .bg {
+    background-image:
+      linear-gradient(to right, #797979 4px, transparent 4px),
+      linear-gradient(to bottom, #797979 4px, transparent 4px);
+    }
+    .cube__face {
+        border: 1px solid black;
+    }
+    .loadtext {
+        background: rgb(0,0,0,0.5);
+        color: white;
+    }
+.version .dev {
+    color: rgb(167, 167, 0);
+}

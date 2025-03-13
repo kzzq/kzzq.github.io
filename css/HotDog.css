@@ -1,0 +1,28 @@
+body, *, .themeselector select {
+    background: red !important;
+    color: yellow !important;
+    font-family: "Comic Sans MS" !important;
+    font-size: 28px !important;
+    filter: none !important;
+}
+.logocom .bg, .logocom .shadow, .logocom img.image {
+    display: none;
+}
+.logocont {
+    background: yellow !important;
+}
+.loading {
+    background: red;
+}
+.cube__face {
+    border: 4px solid yellow;
+    background: transparent !important;
+}
+.loadtext {
+    background: red;
+    color: yellow;
+}
+.logocom h1 {
+    margin-top: 50px;
+    font-size: 128px !important;
+}

@@ -1,0 +1,21 @@
+:root {
+    --realbg-color: linear-gradient(0deg,#30a2c6,#bb62a2);
+    --background-color: #eeeeee;
+    --shadowup-color: #bb62a2;
+    --text-color: rgb(209, 72, 209);
+    --text2-color: rgb(113, 167, 236);
+    --main-color: rgb(255, 0, 242);
+    --cont-color: rgb(210, 173, 211);
+    --logocont-color: rgb(253, 148, 244);
+}
+.logocom .image {
+    filter: grayscale() invert() !important;
+}
+.logocom .bg {
+    background-image:
+      linear-gradient(to right, #bb62a2 4px, transparent 4px),
+      linear-gradient(to bottom, #bb62a2 4px, transparent 4px);
+    }
+.version .dev {
+    color: rgb(167, 167, 0);
+}

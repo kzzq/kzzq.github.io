@@ -1,0 +1,15 @@
+/* as already intended as a default theme */
+/* oops, if there's anything i forgot, here: */
+:root {
+    --realbg-color: black;
+    --background-color: black;
+    --shadowup-color: rgb(35,35,35);
+    --text-color: white;
+    --text2-color: black;
+    --main-color: white;
+    --cont-color: rgb(25,25,25);
+    --logocont-color: rgb(75, 75, 75);
+}
+.themeselector option {
+    background: grey;
+}

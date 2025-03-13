@@ -3,7 +3,7 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
-    background: var(--background-color);
+    background: var(--realbg-color);
     color: var(--text-color);
     font-family: sans-serif;
 }
@@ -16,21 +16,44 @@ body {
     --cont-color: rgb(25,25,25);
     --logocont-color: rgb(75, 75, 75);
 }
-body.light {
-    --background-color: #eee;
-    --shadowup-color: rgb(206, 206, 206);
-    --text-color: black;
-    --text2-color: white;
-    --main-color: black;
-    --cont-color: rgb(206, 206, 206);
-    --logocont-color: rgb(235, 235, 235);
+.themeselector {
+    font-size: 16px;
 }
-body.light .logocom .image {
-    filter: grayscale() invert();
+.themeselector option:nth-child(3)::after {
+    content: "(unfinished)";
+}
+.themeselector option {
+    font-family: Visitor !important;
+    color: var(--text-color) !important;
+}
+table {
+    border: 1px solid var(--text-color);
+}
+.themeselector select {
+    font-family: Visitor !important;
+    background: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
+.themeselector {
+    width: 100%;
+    margin: 10px -10px;
+    text-align: right;
+    position: absolute;
+    z-index: 11;
 }
 body {
     overflow: hidden;
     pointer-events: none;
+}
+.version .dev {
+    color: yellow;
 }
 .notif { display: none; }
 .notif.update {
@@ -41,6 +64,9 @@ body {
     z-index: 100;
     width: 100%;
     text-align: center;
+}
+* {
+    transition: 0.5s;
 }
 html {
     height: 100vh;
@@ -168,6 +194,7 @@ button.close .imageview .view:hover, .imageview button.close:hover {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -257,9 +284,11 @@ button.close .imageview .view:hover, .imageview button.close:hover {
     width: 300px;
     float: right;
 }
-noscript {
-    width: 100%;
+.noscript {
+    width: 100vw;
+    z-index: 101;
     top: 0;
+    left: 0;
     text-align: center;
     position: fixed;
     background: rgb(73, 0, 0);
@@ -379,8 +408,9 @@ button { cursor: url('/cursor.png'), auto; }
     .links .right { float: none; }
     .comp.updet { width: 100vw; text-align: left; }
     .dicusin { width: 100%; }
-    .logocom .image {
-        margin-left: 290px !important;
+    .logocom .image { margin-left: 290px !important; }
+    .themeselector {
+        text-align: center;
     }
     .container { margin-bottom: 20px; }
     .linkcontact { margin-right: 200px; }

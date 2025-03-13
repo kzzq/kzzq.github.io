@@ -83,12 +83,28 @@ function updatesystem() {
 }
 function themeSystem() {
     const theme = localStorage.getItem("theme");
+    const style = document.getElementById("styles");
 
-    if (theme == "light") {
-        document.body.classList.add("light");
+    if (theme == null) {
+        localStorage.setItem("theme", "dark");
+        style.href = "/css/dark.css";
+        location.reload();
     }
-
+    if (theme == "light") {
+        style.href = "/css/light.css";
+    }
     if (theme == "dark") {
-        document.body.classList.remove("light");
+        style.href = "/css/dark.css";
+    }
+    if (theme == "vapor") {
+        style.href = "/css/vapor.css";
+    }
+    if (theme == "HotDog") {
+        style.href = "/css/HotDog.css";
     }
 }
+function themeSelection(e) {
+    let style = document.getElementById("styles");
+    style.href = "/css/" + e.target.value + ".css";
+    localStorage.setItem("theme", e.target.value);
+  }

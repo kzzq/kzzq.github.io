@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>k e z z a q u r y m</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link id="styles" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body onload="startin(); startload(); updatesystem()">
-    <p class="version">kzzq <span id="textver"></span> <span style="color: yellow;">[DEV]</span> | hosted with nekoweb</p>
+<body onload="startin(); startload(); updatesystem(); themeSystem()">
+    <p class="version">kzzq <span id="textver"></span> <span class="dev">[DEV]</span> | hosted with nekoweb</p>
     <div class="imageview" id="image_view">
         <div class="imaging">
             <div class="buttons">
@@ -31,6 +32,15 @@
                 <h6>15.724</h6>
                 <h1>KZZQ</h1>
                 <img src="/img/logo_epilepsy.gif" class="image">
+                <div class="themeselector">
+            <span>theme: </span>
+            <select onchange="themeSelection(event)">
+                <option>dark</option>
+                <option>light</option>
+                <option>vapor</option>
+                <option>HotDog</option>
+            </select>
+                </div>
             </div>
             <hr>
             <div class="links">
@@ -63,7 +73,14 @@
                 <table>
                     <ul>
                         <b>Fren. Update. [Unknown; v2.1916A]</b>
-                        <li>Light theme</li>
+                        <li>Themes including:
+                            <ul>
+                                <li>Light</li>
+                                <li>Vapor</li>
+                                <li>hotdog (secret)</li>
+                            </ul>
+                        </li>
+                        <li>Updated "Credits" section</li>
                     </ul>
                     <hr>
                 	<ul><b>smol upditto fix [Decembeer 12th 2024; v2.1905A]</b>
@@ -148,10 +165,23 @@
         </div>
         <div class="dicusin" id="section_credits">
             <h2>credits</h2>
-            <div class="comp credi">
-                used for<br>
-                fonts <span class="blinktext">::</span> Logo - Digitag; Links - Visitor (russian language by Segor);
-            </div>
+            <table style="width: 100%">
+                <tr>
+                    <th>Type</th>
+                    <th>Resources</th>
+                    <th>Used for</th>
+                </tr>
+                <tr>
+                    <td>Fonts</td>
+                    <td>Digitag</td>
+                    <td>Logo</td>
+                </tr>
+                <tr>
+                    <td>Fonts</td>
+                    <td>Visitor (russian language by Segor)</td>
+                    <td>Links</td>
+                </tr>
+            </table>
         </div>
     </div>
     <div class="marquee right">
@@ -159,8 +189,7 @@
         <span class="b">何がそれを引き起こしたでしょうか</span>
     </div>
 
-    <div class="loading" id="loadscr">
-        <noscript>JavaScript is disabled from your browser! Please re-enable it, else this website will break for some important functions!</noscript>
+    <div class="loading" id="loadscr"><noscript class="noscript">JavaScript is disabled from your browser! Please re-enable it, else this website will break for some important functions!</noscript>
         <div class="scene">
             <div class="cube">
               <div class="cube__face cube__face--front"></div>
