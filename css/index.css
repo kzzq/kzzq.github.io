@@ -9,6 +9,7 @@ body {
 }
 :root {
     --background-color: black;
+    --realbg-color: black;
     --shadowup-color: rgb(35,35,35);
     --text-color: white;
     --text2-color: black;
@@ -25,9 +26,6 @@ body {
 .themeselector option {
     font-family: Visitor !important;
     color: var(--text-color) !important;
-}
-table {
-    border: 1px solid var(--text-color);
 }
 .themeselector select {
     font-family: Visitor !important;
@@ -52,8 +50,18 @@ body {
     overflow: hidden;
     pointer-events: none;
 }
-.version .dev {
+.version .dev, #localep { display: none; }
+.version .dev, .devep {
     color: yellow;
+}
+.devep {
+    display: none;
+    font-family: Paskowy;
+    font-size: 28px;
+    position: fixed;
+    bottom: 12px;
+    right: 24px;
+    margin: 0;
 }
 .notif { display: none; }
 .notif.update {
@@ -68,6 +76,24 @@ body {
 * {
     transition: 0.5s;
 }
+
+table {
+    width: 100%;
+}
+table tr td {
+    vertical-align: top;
+}
+table.credits tr a {
+    border: 1px solid wheat;
+    background: rgba(245, 222, 179, 0.253);
+    padding: 2px;
+}
+table tr td:last-child {
+    text-align: end;
+}
+table.debug tr td {
+    border: 1px solid white;
+}
 html {
     height: 100vh;
     cursor: url('/cursor.png'), auto;
@@ -79,6 +105,10 @@ html {
 @font-face {
     font-family: Digitag;
     src: url('/fonts/Digitag.ttf');
+}
+@font-face {
+    font-family: Paskowy;
+    src: url('/fonts/Paskowy.ttf');
 }
 .imeg.smol {
     border: 1px solid var(--main-color);
@@ -261,27 +291,26 @@ button.close .imageview .view:hover, .imageview button.close:hover {
     }
 }
 .imeg h6 {
-    position: absolute;
-    width: 78px;
-    margin: 233px 215px;
+    margin: -12px 10px;
+    text-align: end;
     text-shadow: 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color);
 }
 .imeg h5 {
-    position: absolute;
     margin: 5px;
+    text-align: end;
     text-shadow: 0 0 2px var(--background-color), 0 0 2px var(--background-color), 0 0 2px var(--background-color);
 }
 .imeg:hover > img {
     box-shadow: 0 0 4px white;
 }
 .imeg img {
-    width: 300px;
+    width: 200px;
     border: 1px solid white;
     box-shadow: 0 0 4px var(--background-color);
 }
 .imeg {
+    text-align: end;
     margin: 15px;
-    width: 300px;
     float: right;
 }
 .noscript {
@@ -356,7 +385,7 @@ button.close .imageview .view:hover, .imageview button.close:hover {
   .cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
 .container {
     border: 1px solid white;
-    width: 800px;
+    width: 900px;
     height: auto;
     background: var(--cont-color);
     margin-bottom: 20px;
@@ -372,7 +401,7 @@ button.close .imageview .view:hover, .imageview button.close:hover {
 .comp.updet {
     padding: 15px;
     display: inline-block;
-    height: 175px;
+    height: 400px;
     overflow-y: scroll;
 }
 button { cursor: url('/cursor.png'), auto; }
@@ -396,12 +425,19 @@ button { cursor: url('/cursor.png'), auto; }
 }
 .dicusin {
     display: none;
-    width: 456px;
+    width: 400px;
+}
+.dicusin, .counters {
     font-size: 12px;
-    margin: 10px;
+}
+.counters {
+    text-align: center;
 }
 .links .secondls { display: none; }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 880px) {
+    table tr td:first-child {
+        display: block;
+    }
     .links, .dicusin, .dicusin img { text-align: center; }
     .imeg, .infoimage, .nopastimages, .logocom h1 { display: none; }
     .imeg.smol, .links .secondls { display: block; }
@@ -446,12 +482,12 @@ button { cursor: url('/cursor.png'), auto; }
     float: right;
     text-align: right;
     margin-top: 60px;
-    margin-left: 550px;
+    margin-left: 650px;
 }
 .logocom .shadow {
     z-index: 11;
     margin: 0;
-    width: 775px;
+    width: 875px;
     height: 300px;
     position: absolute;
         background-image:

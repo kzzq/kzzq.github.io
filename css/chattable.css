@@ -1,0 +1,33 @@
+* {
+    transition: 0.5s;
+}
+#top_banner {
+    display: none;
+}
+.allMessages, .msgWrapper .allMessages {
+    background: rgb(75, 75, 75);
+    color: white;
+    margin: 10px;
+    border-radius: 6px 6px 6px 0;
+}
+#input:focus-visible {
+    background: white;
+}
+#input {
+    color: black;
+    border-radius: 4px 4px 0 0;
+}
+:where(#settings) {
+    filter: invert();
+    background-color: white;
+    padding: 6px;
+    border-radius: 304px;
+}
+#save {
+    width: 100%;
+    padding: 4px;
+    font-size: 14px;
+    background: white;
+    color: black;
+    text-transform: lowercase;
+}

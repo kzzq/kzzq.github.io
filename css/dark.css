@@ -13,3 +13,6 @@
 .themeselector option {
     background: grey;
 }
+.version .dev, .devep {
+    color: yellow;
+}

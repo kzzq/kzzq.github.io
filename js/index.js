@@ -16,6 +16,11 @@ function startload() {
         }, 450);
     }, 3500);
 }
+function disableloading() {
+    document.getElementById('loadscr').style.display = "none";
+    document.body.style.overflow = "visible";
+    document.body.style.pointerEvents = "all";
+}
 function launch_info() {
     document.getElementById('section_info').style.display = "block";
     document.getElementById('section_gallery').style.display = "none";
@@ -63,7 +68,7 @@ function deview_concurimage() {
 
 function updatesystem() {
     const version = localStorage.getItem("version");
-    const versions = ["v2.1825A", "v2.1902A", "v2.1905A", "v2.1916A"];
+    const versions = ["v2.1825A", "v2.1902A", "v2.1905A", "v2.1916A", "v2.1921A"];
     const textver = document.getElementById("textver");
     const notification = document.getElementById("notif_update");
 

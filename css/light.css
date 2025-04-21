@@ -23,6 +23,6 @@
         background: rgb(0,0,0,0.5);
         color: white;
     }
-.version .dev {
+.version .dev, .devep {
     color: rgb(167, 167, 0);
 }

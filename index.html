@@ -8,8 +8,9 @@
     <link id="styles" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body onload="startin(); startload(); updatesystem(); themeSystem()">
-    <p class="version">kzzq <span id="textver"></span> <span class="dev">[DEV]</span> | hosted with nekoweb</p>
+<body onload="startin(); startload(); updatesystem(); themeSystem(); disableloading()">
+    <p class="devep" id="devep">This page is in development.<span id="localep"> | LOCALHOST MODE: TRUE</span></p>
+    <p class="version">kzzq <span id="textver"></span> <span class="dev" id="verdev">[DEV]</span> | hosted by <span id="hosting"></span></p>
     <div class="imageview" id="image_view">
         <div class="imaging">
             <div class="buttons">
@@ -30,7 +31,9 @@
                 <div class="bg"></div>
                 <div class="shadow"></div>
                 <h6>15.724</h6>
-                <h1>KZZQ</h1>
+                <h1>
+                    KZZQ
+                </h1>
                 <img src="/img/logo_epilepsy.gif" class="image">
                 <div class="themeselector">
             <span>theme: </span>
@@ -48,140 +51,205 @@
                     <button onclick="launch_info()">info</button><button onclick="launch_gallery()">gallery</button><button onclick="launch_updates()">updates</button><br class="secondls"><button onclick="launch_contact()">contact</button><button class="right" onclick="launch_credits()">credits</button>
                 </nav>
             </div>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <iframe width="200" height="200" style="border:1px solid white; margin: 12px;" src="https://rubybulbs.net/neko.html"></iframe>
+                </td>
+                <td class="dicusin" id="section_info">
+                    <h2>info</h2>
+                    hello! this is official kezzaqurym website! as you can see, the website is redesigned a little bit.<br><br>
+                    <span class="infoimage">over there is an concurrent image, which is captured from any Source engine games today, like <a href="https://gm12r.flatgrass.net/">Garry's Mod 12 Resurrected</a>. ➔</span><br>
+                    as with links, you can go in only one page.<br>
+                    <a class="littlesecret" href="https://kzzq.pages.dev/">would you look at new design?</a>
+                <td class="dicusin" id="section_gallery">
+                    <h2>gallery</h2>
+                    <img src="/img/screenshots/gm_freespace06_v2-10001.jpg" class="imeg smol" onclick="view_concurimage()">
+                    <p class="nopastimages">No past images taken.</p>
+                </td>
+                <td class="dicusin" id="section_updates">
+                    <h2 style="text-align: center;">UPDATE LOGS</h2>
+                    <div class="comp updet">
+                        <table>
+                            <ul>
+                                <b>Fren. Update. [Unknown; v2.1921A]</b>
+                                <li>Themes including:
+                                    <ul>
+                                        <li>Light</li>
+                                        <li>Vapor</li>
+                                        <li>hotdog (secret)</li>
+                                    </ul>
+                                </li>
+                                <li>Updated "Credits" section</li>
+                                <li>Extended container a bit
+                                    <ul>
+                                        <li>Sorted out 3 sections (was 2)</li>
+                                        <li><b>Petah. The nekolinkse is heah.</b></li>
+                                    </ul>
+                                </li>
+                                <li>Added development bar when it detects as if it's from a dev site repo or locally</li>
+                                <li>Added site stats - Counters including:
+                                    <ul>
+                                        <li>When it was created</li>
+                                        <li>When it was updated</li>
+                                        <li>How many visitors and followers currently</li>
+                                    </ul>
+                                </li>
+                                <li>Added chat on the right (currently hidden)</li>
+                            </ul>
+                            <hr>
+                            <ul><b>smol upditto fix [Decembeer 12th 2024; v2.1905A]</b>
+                                <li>Fixed the link for "GMOD12Resurrected", I think you know what I mean</li>
+                                <li>Fixed 'Not found' page</li>
+                                </ul>
+                                <hr>
+                            <ul><b>smol upditto fix [December 11th 2024; v2.1902A]</b>
+                                <li>Added update system
+                                    <ul>
+                                        <li>You cannot return back to previous update.</li>
+                                    </ul>
+                                </li>
+                                <li>Added Credits section
+                                    <ul>
+                                        <li>Not finished yet</li>
+                                    </ul>
+                                </li>
+                                <li><span class="glowtext">Glowing text for links, it is easy to make it glow!</span></li>
+                                <li>Fixed where some images (especially concurrent) don't show in Gallery section for mobile devices</li>
+                                <li>Website's now mobile-friendly
+                                    <ul>
+                                        <li>probably... or not...</li>
+                                        <li>it was just besides for low-width devices</li>
+                                    </ul>
+                                </li>
+                                <li>Fixed the cursor for hovering buttons</li>
+                            </ul>
+                            <hr>
+                            <ul><b>Pea. Update. [December 10th 2024; v2.1825A]</b>
+                                <li>Mostly redesigned an website layout, including:
+                                    <ul>
+                                        <li>Concurrent image</li>
+                                        <li>Gallery section</li>
+                                        <li>Contact section</li>
+                                        <li>Extended logo container with some perspective things</li>
+                                        <li>Cryptic (= japanese) text around that container</li>
+                                        <li>Not so colourful anymore!</li>
+                                    </ul>
+                                <li>Lacks some features (which I wouldn't bring back), including:
+                                    <ul>
+                                        <li>Guestbook</li>
+                                        <li>Marquee</li>
+                                        <li>Projects section</li>
+                                        <li>Video holder</li>
+                                        <li>Blogs</li>
+                                    </ul>
+                                </li>
+                                </li>
+                            </ul>
+                            <hr>
+                            <ul><b>Colorful update [July 13th 2024; v1.3945]</b>
+                                <li>Layout changes:
+                                    <ul>
+                                        <li>Recolored the layout from depression to lightly blue
+                                        <li>Improved guestbook</li> 
+                                        <li>Added 'Credits' page</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <hr>
+                            <ul><b>Not-so-first update! [June 8th 2024; v1.2000]</b>
+                                <li>New layout:
+                                    <ul>
+                                        <li>Blogs!</li>
+                                        <li>Projects!</li>
+                                        <li>Video holder!</li>
+                                        <li>Guestbook!</li>
+                                        <li>Rabbit</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </table>
+                    </div>
+                </td>
+                <td class="dicusin" id="section_contact">
+                <h2><i>contact me!</i></h2>
+                <img class="icon" src="/img/icons/msn.png">MSN/WLM <span class="blinktext">::</span> rando@escargot.chat <span class="linkcontact"><a href="msnim:add?contact=rando@escargot.chat">Add me</a> | <a href="msnim:chat?contact=rando@escargot.chat">Chat with me</a></span><br>
+                <img class="icon" src="/img/icons/aim.svg">AOL:IM <span class="blinktext">::</span> rando <span class="linkcontact"><a href="aim:goim?screenname=rando">Instant Message</a></span><br>
+                <img class="icon" src="/img/icons/xfire.png">XF1re <span class="blinktext">::</span> kariol <span class="linkcontact"><a href="https://xf1re.com/profile/kariol" target="_blank">Profile</a> | <a href="https://xf1re.com/communities/kzzq" target="_blank">Group</a></span>
+                </td>
+                <td class="dicusin" id="section_credits">
+                    <h2>credits</h2>
+                    <table class="credits" style="width: 100%; border: 1px solid white;">
+                        <tr>
+                            <th>Type</th>
+                            <th>Resources</th>
+                            <th>Used for</th>
+                        </tr>
+                        <tr>
+                            <td>Fonts</td>
+                            <td>
+                                <a href="https://www.1001fonts.com/digitag-font.html">Digitag</a>
+                            </td>
+                            <td>Logo</td>
+                        </tr>
+                        <tr>
+                            <td>Fonts</td>
+                            <td>Visitor (russian language by Segor)</td>
+                            <td>Links</td>
+                        </tr>
+                        <tr>
+                            <td>Fonts</td>
+                            <td>
+                                <a href="https://www.dafont.com/paskowy.font">Paskowy</a>
+                            </td>
+                            <td>A development bar</td>
+                        </tr>
+                        <tr>
+                            <td>"Ad"</td>
+                            <td>
+                                <a href="https://rubybulbs.net/nekolink.html">Nekolink</a>
+                            </td>
+                            <td>on da left!</td>
+                        </tr>
+                        <tr>
+                            <td>Stats</td>
+                            <td>
+                                <a href="https://maxpixels.moe/resources/nekoweb-stats/">Maxpixels' Nekoweb Site Stats</a>
+                            </td>
+                            <td>on da bottom of da containah!</td>
+                        </tr>
+                        <tr>
+                            <td>Chat</td>
+                            <td>
+                                <a href="https://iframe.chat/">Chattable</a>
+                            </td>
+                            <td>on da right!</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <div class="imeg" onclick="view_concurimage()">
+                    <h5>Concurrent image:</h5>
+                    <img src="/img/screenshots/gm_freespace06_v2-10001.jpg">
+                    <h6>[click to view]</h6>
+                    </div>
+                    <iframe src='https://iframe.chat/embed?chat=kzzQueChat' id='chattable' style="width: 230px; height: 300px; border: 1px solid white;" frameborder='none' hidden></iframe>
+                </td>
+            </tr>
+        </table>
+        <div>
+        </div>
 
-            <div class="imeg" onclick="view_concurimage()">
-                <h5>Concurrent image:</h5>
-                <h6>[click to view]</h6>
-                <img src="/img/screenshots/gm_freespace06_v2-10001.jpg">
-                </div>
-        </div>
-        <div class="dicusin" id="section_info">
-            <h2>info</h2>
-            hello! this is official kezzaqurym website! as you can see, the website is redesigned a little bit.<br><br>
-            <span class="infoimage">over there is an concurrent image, which is captured from any Source engine games today, like <a href="https://gm12r.flatgrass.net/">Garry's Mod 12 Resurrected</a>. ➔</span><br>
-            as with links, you can go to sections in only one page.<br>
-            <a class="littlesecret" href="https://kzzq.pages.dev/">would you look at new design?</a>
-        </div>
-        <div class="dicusin" id="section_gallery">
-            <h2>gallery</h2>
-            <img src="/img/screenshots/gm_freespace06_v2-10001.jpg" class="imeg smol" onclick="view_concurimage()">
-            <p class="nopastimages">No past images taken.</p>
-        </div>
-        <div class="dicusin" id="section_updates">
-            <h2>UPDATE LOGS</h2>
-            <div class="comp updet">
-                <table>
-                    <ul>
-                        <b>Fren. Update. [Unknown; v2.1916A]</b>
-                        <li>Themes including:
-                            <ul>
-                                <li>Light</li>
-                                <li>Vapor</li>
-                                <li>hotdog (secret)</li>
-                            </ul>
-                        </li>
-                        <li>Updated "Credits" section</li>
-                    </ul>
-                    <hr>
-                	<ul><b>smol upditto fix [Decembeer 12th 2024; v2.1905A]</b>
-                        <li>Fixed the link for "GMOD12Resurrected", I think you know what I mean</li>
-                        <li>Fixed 'Not found' page</li>
-                        </ul>
-                        <hr>
-                    <ul><b>smol upditto fix [December 11th 2024; v2.1902A]</b>
-                        <li>Added update system
-                            <ul>
-                                <li>You cannot return back to previous update.</li>
-                            </ul>
-                        </li>
-                        <li>Added Credits section
-                            <ul>
-                                <li>Not finished yet</li>
-                            </ul>
-                        </li>
-                        <li><span class="glowtext">Glowing text for links, it is easy to make it glow!</span></li>
-                        <li>Fixed where some images (especially concurrent) don't show in Gallery section for mobile devices</li>
-                        <li>Website's now mobile-friendly
-                            <ul>
-                                <li>probably... or not...</li>
-                                <li>it was just besides for low-width devices</li>
-                            </ul>
-                        </li>
-                        <li>Fixed the cursor for hovering buttons</li>
-                    </ul>
-                    <hr>
-                    <ul><b>Pea. Update. [December 10th 2024; v2.1825A]</b>
-                        <li>Mostly redesigned an website layout, including:
-                            <ul>
-                                <li>Concurrent image</li>
-                                <li>Gallery section</li>
-                                <li>Contact section</li>
-                                <li>Extended logo container with some perspective things</li>
-                                <li>Cryptic (= japanese) text around that container</li>
-                                <li>Not so colourful anymore!</li>
-                            </ul>
-                        <li>Lacks some features (which I wouldn't bring back), including:
-                            <ul>
-                                <li>Guestbook</li>
-                                <li>Marquee</li>
-                                <li>Projects section</li>
-                                <li>Video holder</li>
-                                <li>Blogs</li>
-                            </ul>
-                        </li>
-                        </li>
-                    </ul>
-                    <hr>
-                    <ul><b>Colorful update [July 13th 2024; v1.3945]</b>
-                        <li>Layout changes:
-                            <ul>
-                                <li>Recolored the layout from depression to lightly blue
-                                <li>Improved guestbook</li> 
-                                <li>Added 'Credits' page</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr>
-                    <ul><b>Not-so-first update! [June 8th 2024; v1.2000]</b>
-                        <li>New layout:
-                            <ul>
-                                <li>Blogs!</li>
-                                <li>Projects!</li>
-                                <li>Video holder!</li>
-                                <li>Guestbook!</li>
-                                <li>Rabbit</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </table>
+        <div class="counters">
+        <div style="width: 100%;"> 
+            <span id="created"><em>Created in</em> ...</span>,
+            <span id="updated"><em>updated in</em> ... .</span>
             </div>
+            <span id="visitors">visitors</span> | 
+            <span id="followers">followers</span>
         </div>
-        
-        <div class="dicusin" id="section_contact">
-            <h2><i>contact me!</i></h2>
-            <img class="icon" src="/img/icons/msn.png">MSN/WLM <span class="blinktext">::</span> rando@escargot.chat <span class="linkcontact"><a href="msnim:add?contact=rando@escargot.chat">Add me</a> | <a href="msnim:chat?contact=rando@escargot.chat">Chat with me</a></span><br>
-            <img class="icon" src="/img/icons/aim.svg">AOL:IM <span class="blinktext">::</span> rando <span class="linkcontact"><a href="aim:goim?screenname=rando">Instant Message</a></span><br>
-            <img class="icon" src="/img/icons/xfire.png">XF1re <span class="blinktext">::</span> kariol <span class="linkcontact"><a href="https://xf1re.com/profile/kariol" target="_blank">Profile</a> | <a href="https://xf1re.com/communities/kzzq" target="_blank">Group</a></span>
-        </div>
-        <div class="dicusin" id="section_credits">
-            <h2>credits</h2>
-            <table style="width: 100%">
-                <tr>
-                    <th>Type</th>
-                    <th>Resources</th>
-                    <th>Used for</th>
-                </tr>
-                <tr>
-                    <td>Fonts</td>
-                    <td>Digitag</td>
-                    <td>Logo</td>
-                </tr>
-                <tr>
-                    <td>Fonts</td>
-                    <td>Visitor (russian language by Segor)</td>
-                    <td>Links</td>
-                </tr>
-            </table>
+
         </div>
     </div>
     <div class="marquee right">
@@ -204,7 +272,15 @@
           </div>
           <div class="notif update" id="notif_update">
             a new update is available. please fully refresh by clicking this notification.
-        </div>
+        </div> 
 </body>
+<script src="https://iframe.chat/scripts/main.min.js"></script>
+<script>
+    chattable.initialize({
+    stylesheet : "/css/chattable.css"
+    });
+  </script>
+<script src="/js/statss.js"></script>
+<script src="/js/urlCheck.js"></script>
 <script src="/js/index.js" defer></script>
 </html>
