@@ -8,7 +8,7 @@
     <link id="styles" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body onload="startin(); startload(); updatesystem(); themeSystem(); disableloading()">
+<body onload="startin(); startload(); updatesystem(); themeSystem(); ageSystem(); disableloading()">
     <p class="devep" id="devep">This page is in development.<span id="localep"> | LOCALHOST MODE: TRUE</span></p>
     <p class="version">kzzq <span id="textver"></span> <span class="dev" id="verdev">[DEV]</span> | hosted by <span id="hosting"></span></p>
     <div class="imageview" id="image_view">
@@ -30,7 +30,7 @@
             <div class="logocom">
                 <div class="bg"></div>
                 <div class="shadow"></div>
-                <h6>15.724</h6>
+                <h6 id="age_header"></h6>
                 <h1>
                     KZZQ
                 </h1>
@@ -55,7 +55,7 @@
         <table>
             <tr>
                 <td>
-                    <iframe width="200" height="200" style="border:1px solid white; margin: 12px;" src="https://rubybulbs.net/neko.html"></iframe>
+                    <iframe src='https://iframe.chat/embed?chat=kzzQueChat' id='chattable' class="chat" style="border: 1px solid white;" frameborder='none'></iframe>
                 </td>
                 <td class="dicusin" id="section_info">
                     <h2>info</h2>
@@ -73,15 +73,15 @@
                     <div class="comp updet">
                         <table>
                             <ul>
-                                <b>Fren. Update. [Unknown; v2.1921A]</b>
+                                <b>Fren. Update. (AI Slop) [April 30th 2025; v2.1921A]</b>
                                 <li>Themes including:
                                     <ul>
                                         <li>Light</li>
                                         <li>Vapor</li>
-                                        <li>hotdog (secret)</li>
+                                        <li>hotdog (not so secret)</li>
                                     </ul>
                                 </li>
-                                <li>Updated "Credits" section</li>
+                                <li>Improved "Credits" section</li>
                                 <li>Extended container a bit
                                     <ul>
                                         <li>Sorted out 3 sections (was 2)</li>
@@ -89,17 +89,12 @@
                                     </ul>
                                 </li>
                                 <li>Added development bar when it detects as if it's from a dev site repo or locally</li>
-                                <li>Added site stats - Counters including:
-                                    <ul>
-                                        <li>When it was created</li>
-                                        <li>When it was updated</li>
-                                        <li>How many visitors and followers currently</li>
-                                    </ul>
-                                </li>
-                                <li>Added chat on the right (currently hidden)</li>
+                                <li>Added site stats</li>
+                                <li>Added chat on the left</li>
+                                <li>Added 88x31 buttons (for myself :P)</li>
                             </ul>
                             <hr>
-                            <ul><b>smol upditto fix [Decembeer 12th 2024; v2.1905A]</b>
+                            <ul><b>smol upditto fix [December 12th 2024; v2.1905A]</b>
                                 <li>Fixed the link for "GMOD12Resurrected", I think you know what I mean</li>
                                 <li>Fixed 'Not found' page</li>
                                 </ul>
@@ -217,7 +212,7 @@
                             <td>
                                 <a href="https://maxpixels.moe/resources/nekoweb-stats/">Maxpixels' Nekoweb Site Stats</a>
                             </td>
-                            <td>on da bottom of da containah!</td>
+                            <td>on da right!</td>
                         </tr>
                         <tr>
                             <td>Chat</td>
@@ -225,6 +220,13 @@
                                 <a href="https://iframe.chat/">Chattable</a>
                             </td>
                             <td>on da right!</td>
+                        </tr>
+                        <tr>
+                            <td>Genuinely more things that could put together</td>
+                            <td>
+                                <a href="https://chatgpt.com/">ChatGPT</a>
+                            </td>
+                            <td>MY FAULT</td>
                         </tr>
                     </table>
                 </td>
@@ -234,20 +236,24 @@
                     <img src="/img/screenshots/gm_freespace06_v2-10001.jpg">
                     <h6>[click to view]</h6>
                     </div>
-                    <iframe src='https://iframe.chat/embed?chat=kzzQueChat' id='chattable' style="width: 230px; height: 300px; border: 1px solid white;" frameborder='none' hidden></iframe>
+                    <img src="/img/88x31.gif">
+                    <textarea class="eexto" readonly="" rows="3" cols="12" class="eexto">&lt;a href="https://kzzq.nekoweb.org" target="_blank"&gt;&lt;img src="//kzzq.nekoweb.org/img/88x31.gif" alt="kzzQ 88x31" title="kzzQ"&gt;&lt;/a&gt;</textarea><br>
+                    <img src="/img/88x31_light.gif">
+                    <textarea class="eexto" readonly="" rows="3" cols="12" class="eexto" draggable="false">&lt;a href="https://kzzq.nekoweb.org" target="_blank"&gt;&lt;img src="//kzzq.nekoweb.org/img/88x31_light.gif" alt="kzzQ 88x31" title="kzzQ"&gt;&lt;/a&gt;</textarea>
+                    <hr>
+                    <div class="counters">
+                        <div style="width: 100%;"> 
+                            <span id="created"><em>Created in</em> ...</span>,
+                            <span id="updated"><em>updated in</em> ... .</span>
+                            </div>
+                            <span id="visitors">visitors</span> | 
+                            <span id="followers">followers</span>
+                        </div>
+                    
                 </td>
             </tr>
         </table>
         <div>
-        </div>
-
-        <div class="counters">
-        <div style="width: 100%;"> 
-            <span id="created"><em>Created in</em> ...</span>,
-            <span id="updated"><em>updated in</em> ... .</span>
-            </div>
-            <span id="visitors">visitors</span> | 
-            <span id="followers">followers</span>
         </div>
 
         </div>
@@ -280,7 +286,8 @@
     stylesheet : "/css/chattable.css"
     });
   </script>
-<script src="/js/statss.js"></script>
+<script src="/js/stats.js"></script>
 <script src="/js/urlCheck.js"></script>
+<script src="/js/age.js"></script>
 <script src="/js/index.js" defer></script>
 </html>

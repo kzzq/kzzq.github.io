@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        iframe {
+            border: 1px solid black;
+        }
+        body {
+            color: white;
+            background: black;
+            text-align: center;
+        }
+        .glowing {
+            transition: 0.5s;
+            animation: 4s glowing linear infinite;
+        }
+        @keyframes glowing {
+            0%,100% {
+                color: yellow;
+            }
+            50% {
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="glowing">all my buttons are belong to me!</p>
+    <p>would definitely work if you put slash at the end of url</p>
+    <iframe width="88" height="31" src="./src.html"></iframe>
+    <iframe width="88" height="31" src="./src_light.html"></iframe>
+</body>
+</html>

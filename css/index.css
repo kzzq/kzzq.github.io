@@ -80,6 +80,10 @@ body {
 table {
     width: 100%;
 }
+table tr:first-child td:first-child iframe {
+    margin: 12px;
+    margin-right: 0;
+}
 table tr td {
     vertical-align: top;
 }
@@ -377,6 +381,10 @@ button.close .imageview .view:hover, .imageview button.close:hover {
     width: 200px;
     height: 200px;
   }
+  table.feed {
+    text-align: left;
+    margin: 16px;
+  }
   .cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
   .cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
   .cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
@@ -430,14 +438,28 @@ button { cursor: url('/cursor.png'), auto; }
 .dicusin, .counters {
     font-size: 12px;
 }
+.poll {
+    background: rgba(255,255,255,0.15);
+    padding: 4px;
+    border-radius: 4px;
+    outline: 1px solid black;
+    text-align: start;
+    font-size: 12px;
+}
 .counters {
     text-align: center;
 }
+.chat {width: 200px; height: 300px;}
 .links .secondls { display: none; }
 @media screen and (max-width: 880px) {
-    table tr td:first-child {
-        display: block;
+    .chat { width: calc(100%/1.35); height: 200px; }
+    table tr td:first-child, .chat2, table tr td:last-child { display: inline-block; }
+    table tr td:last-child {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
+    table tr td:last-child .imeg { display: none; }
     .links, .dicusin, .dicusin img { text-align: center; }
     .imeg, .infoimage, .nopastimages, .logocom h1 { display: none; }
     .imeg.smol, .links .secondls { display: block; }
@@ -450,6 +472,16 @@ button { cursor: url('/cursor.png'), auto; }
     }
     .container { margin-bottom: 20px; }
     .linkcontact { margin-right: 200px; }
+}
+.eexto {
+    width: 120px;
+    resize: none;
+    color: var(--text-color);
+    background: var(--logocont-color);
+    border: 1px solid var(--main-color);
+}
+hr {
+    border: 1px solid var(--text-color);
 }
 .logocom h6 {
     z-index: 100;

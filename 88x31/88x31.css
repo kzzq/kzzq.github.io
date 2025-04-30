@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+    cursor: url('//kzzq.nekoweb.org/cursor.png'), auto;
+    overflow: hidden;
+    font-family: Pixel !important;
+    pointer-events: none;
+}
+:root {
+    --background-color: black;
+    --text-color: white;
+    --border-color: #797979;
+    --shadow-color: #353535;
+}
+body.light {
+    --background-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --border-color: #4b4b4b;
+    --shadow-color: rgb(136, 194, 233);
+}
+@font-face {
+    font-family: Pixel;
+    src: url('/fonts/visitor_by_Segor.ttf');
+}
+
+h1 {
+    font-size: 28px;
+    top: -10px;
+    left: 0;
+}
+.logocom h6 {
+    text-align: end;
+    right: 0;
+    top: 0;
+    margin: -2px 3px;
+    font-size: 16px;
+}
+.logocom h1, .logocom h6, .logocom .image {
+    z-index: 12;
+    position: fixed;
+}
+.logocom {
+    perspective: 600px;
+    overflow: hidden;
+    display: flex;
+    font-family: Pixel;
+    font-size: 72px;
+    width: auto;
+    height: 300px;
+}
+.logocom img.image {
+    width: 200px;
+    filter:grayscale();
+}
+.logocom .image {
+    float: right;
+    text-align: right;
+    margin-top: 60px;
+    margin-left: 650px;
+}
+.logocom .shadow {
+    z-index: 11;
+    margin: 0;
+    width: 875px;
+    height: 100vh;
+    position: absolute;
+        background-image:
+          linear-gradient(0deg,transparent,var(--shadow-color));
+}
+.logocom .bg {
+    width: 350px;
+    margin-top: -300px;
+    margin-left: -40px;
+    height: 800px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateX(72deg) translateZ(50px);
+    animation: bg-move 1s linear infinite;
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(to right, var(--border-color) 4px, transparent 4px),
+          linear-gradient(to bottom, var(--border-color) 4px, transparent 4px);
+}
+@keyframes bg-move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -40px 0;
+    }
+}
