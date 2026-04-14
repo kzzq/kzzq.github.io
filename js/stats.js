@@ -1,6 +1,6 @@
 // this script is under the MIT license (https://max.nekoweb.org/resources/license.txt)
 
-let username = "kzzq"; // <<<--- Insert your username here!
+let username = "kariol"; // <<<--- Insert your username here!
 
 (async () => {
   try {
